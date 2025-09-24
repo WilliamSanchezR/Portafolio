@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Oswald:wght@200..700&display=swap');
+
+*:root {
+    --primary-color: #f56e0f;
+    --secondary-color: #878787;
+    --tercery-color: #fbfbfb;
+    --fourty-color: #151419;
+}
+
+.navbar.navbar-expand-lg{
+    background-color: var(--fourty-color) !important;
+}
+
+.navbar.navbar-expand-lg .navbar-brand img{
+    width: 50px;
+    height: 50px;
+}
+
+.navbar.navbar-expand-lg .nav-link {
+    color: var(--tercery-color) !important;
+    font-family: michroma, sans-serif;
+    font-size: 20px;
+}
+
+ul .dropdown-menu {
+    background-color: var(--fourty-color);
+    border-color: var(--primary-color);
+}
+
+ul .dropdown-item:hover {
+    background-color: var(--secondary-color);
+}
+
+ul .dropdown-item {
+    color: var(--tercery-color) !important;
+    font-family: oswald, sans-serif;
+}
+
+ul .dropdown-divider {
+    border-color: var(--primary-color);
+}
+
+.nav-divider {
+    margin-left: 8px;
+    margin-right: 8px;
+    border-left: 1px solid var(--tercery-color);
+    height: 100%;
+}
+
+.navbar.navbar-expand-lg .logo-redes img{
+    width: 20px;
+    height: 20px;
+    margin:15px 10px
+}
+
+main {
+    background: var(--fourty-color);
+    padding: 5%;
+    color: var(--tercery-color) !important;
+}
+
+.hero {
+    background: var(--fourty-color);
+    color: var(--tercery-color);
+    width: 100%;
+}
+
+.col-md-4 {
+    width: 100%;
+    color: var(--tercery-color);
+}
+
+.nombre {
+    width: 100%;
+}
+
+.row .col-md-4 .nombre h2 {
+    font-family: michroma, sans-serif;
+    font-size: 30px;
+    margin-right: 40px;
+}
+
+.row .col-md-4 .nombre h3 {
+    font-family: michroma, sans-serif;
+    font-size: 30px;
+    margin-left: 40px;
+}
+
+.row .col-md-4 .linea-hor {
+    border: none;
+    background-color: var(--primary-color);
+    height: 2px;
+    width: 140px;
+    margin: 10px 0;
+}
+
+.row .col-md-4 .linea-ver {
+    margin: 0 10px;
+}
+
+.row .col-md-4 .enlaces-contacto a {
+    text-decoration: none;
+    color: var(--tercery-color);
+    font-family: oswald, sans-serif;
+    font-size: 16px;
+}
+
+.col-md-4 .enlaces-contacto a:hover {
+    color: var(--primary-color);
+}
+
+.row .col-md-4 .enlaces-contacto a i {
+    margin-right: 10px;
+}
