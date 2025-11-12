@@ -1,358 +1,542 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portafolio</title>
+<head>
 
-<!-- Bootstrap -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Sanchez - Portafolio</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- Bootstrap -->
 
-<!-- Bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Bootstrap icons -->
 
-<!--  Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!--  Awesome -->
 
-<!-- Propio -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Propio -->
+
+    <link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
 
 <body>
+    <!-- Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="home.html"><img src="assets/img/logo.png" alt="logo de mi marca"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Logo"
+                        style="background: linear-gradient(135deg, #f56e0f 0%, #ff8c3a 100%); padding: 8px; border-radius: 10px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end">
-                    <ul class="navbar-nav">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
                         <li class="nav-item">
-                            <a class="nav-link items-nav" aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link" href="#hero">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link items-nav" href="#contactame">Contactame</a>
+                            <a class="nav-link" href="#perfil">Perfil</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle items-nav" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Secciones
+                        <li class="nav-item">
+                            <a class="nav-link" href="#habilidades">Habilidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portafolio">Portafolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experiencia">Experiencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hobbies">Hobbies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contactame">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="logo-redes" href="https://x.com/will6728" target="_blank">
+                                <i class="bi bi-twitter-x"></i>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#introduccion">Intoduccion</a></li>
-                                <li><a class="dropdown-item" href="#prefilProfesional">Perfil profesional</a></li>
-                                <li><a class="dropdown-item" href="#habilidades">Habilidades</a></li>
-                                <li><a class="dropdown-item" href="#portafolio">Portafolio</a></li>
-                                <li><a class="dropdown-item" href="#estudios">Estudios</a></li>
-                                <li><a class="dropdown-item" href="#experiencia">Experiencia</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#hobbies">Hobbies</a></li>
-                            </ul>
                         </li>
-                        <ul class="navbar-nav">
-
-                            <li class="nav-divider"></li>
-                            <a class="logo-redes" href="https://x.com/will6728" target="_blank"><i
-                                    class="bi bi-twitter-x"></i></a>
-                            <a class="logo-redes" href="https://github.com/WilliamSanchezR" target="_blank"><i
-                                    class="bi bi-github"></i></a>
-                        </ul>
+                        <li class="nav-item">
+                            <a class="logo-redes" href="https://github.com/WilliamSanchezR" target="_blank">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <hr>
         </nav>
-
     </header>
 
-    <div class="hero container">
-        <div class="row">
-            <div class="col-md-4 cont-nombre">
-                <div class="nombre">
-                    <h2>William</h2>
-                    <h3>Sanchez<span>.</span></h3>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <div class="cont-nombre">
+                        <div class="nombre">
+                            <h2>William</h2>
+                            <h3>Sanchez<span>.</span></h3>
+                        </div>
+                        <hr class="linea-hor">
+                        <div class="enlaces-contacto">
+                            <a href="https://wa.me/573209170425" target="_blank">Whatsapp</a>
+                            <span class="linea-ver">|</span>
+                            <a href="https://www.linkedin.com/in/william-andres-sanchez-rojas-1a3096264/"
+                                target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
                 </div>
 
-                <hr class="linea-hor">
-
-                <div class="enlaces-contacto">
-                    <a href="https://wa.me/573209170425" target="_blank">Whatsapp</a>
-                    <span class="linea-ver">|</span>
-                    <a href="https://www.linkedin.com/in/william-andres-sanchez-rojas-1a3096264/"
-                        target="_blank">Linkedin</a>
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <div class="cont-img">
+                        <div class="hero-circle"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md-4 cont-img">
-                <!-- aqui deberia ir la imagen -->
-            </div>
-
-            <div class="col-md-4 cont-intro">
-                <h4>Introduccion</h4>
-                <h2>DESARROLLDOR</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tenetur tempora ex velit id nesciunt
-                    voluptate maiores magni architecto assumenda fuga, exercitationem delectus. Sunt optio perspiciatis
-                    saepe
-                    aliquid debitis, officia iusto porro iste, perferendis odit id, itaque quae possimus dolor doloribus
-                    vel est
-                    impedit labore dignissimos veritatis ex quod. Quis!
-                </p>
-                <a href="#perfil_profesional">Leer mas <i class="bi bi-arrow-down"></i></a>
+                <div class="col-lg-4 col-md-12">
+                    <div class="cont-intro">
+                        <span class="intro-tag">Introducción</span>
+                        <h2>DESARROLLADOR</h2>
+                        <p>
+                            Apasionado por crear soluciones digitales innovadoras que transforman ideas en realidad.
+                            Especializado en desarrollo web y diseño de experiencias de usuario que generan impacto.
+                        </p>
+                        <a href="#perfil">
+                            Leer más
+                            <i class="bi bi-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <main>
-        <!-- ================= PERFIL ================= -->
+        <!-- Perfil Section -->
         <section id="perfil">
-            <div class="container-fluid perfil">
-                <div class="row">
-                    <div class="col-md-6 cont-img-perfil">
-                        <img src="" alt="Imagen del creador del portafolio">
-                    </div>
-
-                    <div class="col-md-6 cont-info-perfil">
-                        <h6>P</h6>
-                        <h4>PERFIL PROFESIONAL</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, expedita aut quam, sapiente
-                            quos ratione
-                            repellendus ad eius culpa placeat, dolorem numquam corporis nulla. Commodi modi saepe iste
-                            quod eius. Illo
-                            cupiditate itaque atque ipsum non. Ea facilis officia voluptates libero quisquam
-                            praesentium, iusto culpa
-                            explicabo provident placeat dicta dolorem at a eos fuga reiciendis aliquid, ipsum maiores
-                            sapiente ad.
-                            Nobis animi adipisci eveniet corrupti accusamus ipsa, cum totam quod optio nesciunt modi
-                            ipsum, minima
-                            aperiam quaerat magni minus necessitatibus ducimus eum voluptate rem hic? Numquam doloribus
-                            dolorem impedit
-                            asperiores?
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="habilidades">
-            <div class="container habilidades">
-                <h6>H</h6>
-                <h4>HABILIDADES</h4>
-                <div class="skills">
-                    <div class="skill">
-                        <div class="circle" data-percent="70"></div>
-                        <p>Js</p>
-                    </div>
-                    <div class="skill">
-                        <div class="circle" data-percent="50"></div>
-                        <p>Php</p>
-                    </div>
-                    <div class="skill">
-                        <div class="circle" data-percent="80"></div>
-                        <p>Figma</p>
-                    </div>
-                    <div class="skill">
-                        <div class="circle" data-percent="80"></div>
-                        <p>UML</p>
-                    </div>
-                    <div class="skill">
-                        <div class="circle" data-percent="50"></div>
-                        <p>HTML</p>
-                    </div>
-                    <div class="skill">
-                        <div class="circle" data-percent="50"></div>
-                        <p>React</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="portafolio">
             <h6>P</h6>
-            <h4>PORTAFOLIO</h4>
             <div class="container">
-                <div class="cards-container">
-                    <div class="row">
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="" alt="Imagen del proyecto a mencionar">
-                                <i class="bi bi-box-arrow-right"></i>
+                <h4>PERFIL PROFESIONAL</h4>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="cont-img-perfil">
+                            <!-- Placeholder para imagen -->
+                            <div
+                                style="width: 100%; height: 400px; background: linear-gradient(135deg, rgba(245, 110, 15, 0.2) 0%, rgba(255, 140, 58, 0.2) 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--primary-color);">
+                                <i class="fas fa-camera" style="font-size: 80px; color: var(--primary-color);"></i>
                             </div>
-                            <div class="card-body">
-                                <h3>Algoritmos con JavaScript Vanilla</h3>
-                                <i class="bi bi-heart"></i>
-                                <p>Nivel Intermedio-Avanzado</p>
-                            </div>
-                            <div class="card-footer">
-                                <i class="fas fa-book"></i>
-                                <i class="fas fa-code"></i>
-                                <i class="fas fa-file-alt"></i>
-                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="cont-info-perfil">
+                            <p>
+                                Profesional con experiencia en desarrollo de aplicaciones web modernas y diseño de
+                                interfaces intuitivas.
+                                Mi enfoque se centra en crear soluciones tecnológicas que no solo cumplan con los
+                                requisitos técnicos,
+                                sino que también ofrezcan experiencias excepcionales a los usuarios.
+                            </p>
+                            <p>
+                                Con habilidades en múltiples tecnologías y frameworks, me especializo en transformar
+                                conceptos complejos
+                                en productos digitales funcionales y estéticamente atractivos. Mi pasión por el
+                                aprendizaje continuo me
+                                permite mantenerme actualizado con las últimas tendencias y mejores prácticas de la
+                                industria.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Habilidades Section -->
+        <section id="habilidades">
+            <h6>H</h6>
+            <div class="container">
+                <h4>HABILIDADES</h4>
+                <div class="skills">
+                    <div class="skill">
+                        <i class="bi bi-filetype-js skill-icon"></i>
+                        <p class="skill-title">Js</p>
+                    </div>
+                    <div class="skill">
+                        <i class="bi bi-filetype-php skill-icon"></i>
+                        <p class="skill-title">Php</p>
+                    </div>
+                    <div class="skill">
+                        <i class="bi bi-palette skill-icon"></i>
+                        <p class="skill-title">Figma</p>
+                    </div>
+                    <div class="skill">
+                        <i class="bi bi-diagram-3 skill-icon"></i>
+                        <p class="skill-title">UML</p>
+                    </div>
+                    <div class="skill">
+                        <i class="bi bi-filetype-html skill-icon"></i>
+                        <p class="skill-title">HTML</p>
+                    </div>
+                    <div class="skill">
+                        <i class="bi bi-filetype-css skill-icon"></i>
+                        <p class="skill-title">CSS</p>
+                    </div>
+                    <div class="skill">
+                        <i class="bi bi-react skill-icon"></i>
+                        <p class="skill-title">React</p>
+                    </div>
+                    <div class="skill">
+                        <i class="bi bi-bootstrap skill-icon"></i>
+                        <p class="skill-title">Bootstrap</p>
+                    </div>
+                    <div class="skill">
+                        <i class="bi bi-git skill-icon"></i>
+                        <p class="skill-title">Git</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portafolio Section -->
+        <section id="portafolio">
+            <h6>P</h6>
+            <div class="container">
+                <h4>PORTAFOLIO</h4>
+                <div class="cards-container">
+                    <div class="project-card">
+                        <div class="card-header">
+                            <div
+                                style="width: 100%; height: 100%; background: linear-gradient(135deg, #2a2930 0%, #1a1920 100%); display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-code" style="font-size: 60px; color: var(--primary-color);"></i>
+                            </div>
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                        <div class="card-body">
+                            <i class="bi bi-heart"></i>
+                            <h3>Algoritmos con JavaScript Vanilla</h3>
+                            <p>Nivel Intermedio-Avanzado</p>
+                        </div>
+                        <div class="card-footer">
+                            <i class="fas fa-book"></i>
+                            <i class="fas fa-code"></i>
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-header">
+                            <div
+                                style="width: 100%; height: 100%; background: linear-gradient(135deg, #2a2930 0%, #1a1920 100%); display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-laptop-code" style="font-size: 60px; color: var(--primary-color);"></i>
+                            </div>
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                        <div class="card-body">
+                            <i class="bi bi-heart"></i>
+                            <h3>Aplicación Web Responsiva</h3>
+                            <p>Nivel Avanzado</p>
+                        </div>
+                        <div class="card-footer">
+                            <i class="fas fa-book"></i>
+                            <i class="fas fa-code"></i>
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-header">
+                            <div
+                                style="width: 100%; height: 100%; background: linear-gradient(135deg, #2a2930 0%, #1a1920 100%); display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-mobile-alt" style="font-size: 60px; color: var(--primary-color);"></i>
+                            </div>
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </div>
+                        <div class="card-body">
+                            <i class="bi bi-heart"></i>
+                            <h3>Diseño UI/UX Mobile First</h3>
+                            <p>Nivel Intermedio</p>
+                        </div>
+                        <div class="card-footer">
+                            <i class="fas fa-book"></i>
+                            <i class="fas fa-code"></i>
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estudios Section -->
         <section id="estudios">
-            <div class="container">
-                <h6>E</h6>
-                <h4>ESTUDIOS</h4>
-                <div class="grid-container">
-                    <div class="grid-item"><i class="fas fa-chart-line"></i>
-                        <p>CONTADOR PÚBLICO</p>
-                    </div>
-                    <div class="grid-item"><i class="fas fa-chart-line"></i>
-                        <p>CONTADOR PÚBLICO</p>
-                    </div>
-                    <div class="grid-item"><i class="fas fa-chart-line"></i>
-                        <p>CONTADOR PÚBLICO</p>
-                    </div>
-                    <div class="grid-item"><i class="fas fa-chart-line"></i>
-                        <p>CONTADOR PÚBLICO</p>
-                    </div>
-                    <div class="grid-item"><i class="fas fa-chart-line"></i>
-                        <p>CONTADOR PÚBLICO</p>
-                    </div>
-                    <div class="grid-item"><i class="fas fa-chart-line"></i>
-                        <p>CONTADOR PÚBLICO</p>
-                    </div>
-                    <div class="grid-item"><i class="fas fa-chart-line"></i>
-                        <p>CONTADOR PÚBLICO</p>
-                    </div>
-                    <div class="grid-item"><i class="fas fa-chart-line"></i>
-                        <p>CONTADOR PÚBLICO</p>
-                    </div>
-                    <div class="grid-item"><i class="fas fa-chart-line"></i>
-                        <p>CONTADOR PÚBLICO</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="timeline-horizontal" id="experiencia">
             <h6>E</h6>
-            <h4>EXPERIENCIA</h4>
-            <div class="timeline-line"></div>
-            <div class="timeline-item">
-                <div class="dot"></div>
-                <div class="card">
-                    <h3>Analista de costos</h3>
-                    <p>+1 A</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="dot"></div>
-                <div class="card">
-                    <h3>Contador Público</h3>
-                    <p>+2 A</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="dot"></div>
-                <div class="card">
-                    <h3>Asesor Financiero</h3>
-                    <p>+3 A</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="hobbies">
             <div class="container">
-                <h6>H</h6>
-                <h4>HOBBIES</h4>
-                <div class="gaming-section">
-                    <div class="card">
-                        <div class="icon">🎮</div>
-                        <p>Gaming</p>
+                <h4>ESTUDIOS</h4>
+                <div class="estudios-container">
+                    <div class="estudio-item">
+                        <div class="estudio-icon-wrapper">
+                            <i class="fas fa-graduation-cap estudio-icon"></i>
+                        </div>
+                        <h3 class="estudio-title">Desarrollo Web Full Stack</h3>
+                        <span class="estudio-badge">2023</span>
+                        <p class="estudio-institution">Instituto Tecnológico</p>
+                        <p class="estudio-description">
+                            Formación integral en desarrollo web moderno, frontend, backend y bases de datos.
+                        </p>
                     </div>
-                    <div class="card wide">
-                        <div class="icon">🎮</div>
-                        <p>Gaming</p>
+
+                    <div class="estudio-item">
+                        <div class="estudio-icon-wrapper">
+                            <i class="fas fa-code estudio-icon"></i>
+                        </div>
+                        <h3 class="estudio-title">Programación Avanzada</h3>
+                        <span class="estudio-badge">2022</span>
+                        <p class="estudio-institution">Universidad Digital</p>
+                        <p class="estudio-description">
+                            Algoritmos, estructuras de datos y patrones de diseño profesionales.
+                        </p>
                     </div>
-                    <div class="card medium">
-                        <div class="icon">🎮</div>
-                        <p>Gaming</p>
+
+                    <div class="estudio-item">
+                        <div class="estudio-icon-wrapper">
+                            <i class="fas fa-palette estudio-icon"></i>
+                        </div>
+                        <h3 class="estudio-title">Diseño UX/UI</h3>
+                        <span class="estudio-badge">2022</span>
+                        <p class="estudio-institution">Escuela de Diseño</p>
+                        <p class="estudio-description">
+                            Experiencia de usuario, diseño de interfaces y prototipado con Figma.
+                        </p>
                     </div>
-                    <div class="card">
-                        <div class="icon">🎮</div>
-                        <p>Gaming</p>
+
+                    <div class="estudio-item">
+                        <div class="estudio-icon-wrapper">
+                            <i class="fas fa-chart-line estudio-icon"></i>
+                        </div>
+                        <h3 class="estudio-title">Contaduría Pública</h3>
+                        <span class="estudio-badge">2020</span>
+                        <p class="estudio-institution">Universidad Nacional</p>
+                        <p class="estudio-description">
+                            Título profesional con énfasis en finanzas y auditoría empresarial.
+                        </p>
                     </div>
-                    <div class="card medium">
-                        <div class="icon">🎮</div>
-                        <p>Gaming</p>
+
+                    <div class="estudio-item">
+                        <div class="estudio-icon-wrapper">
+                            <i class="fas fa-database estudio-icon"></i>
+                        </div>
+                        <h3 class="estudio-title">Bases de Datos</h3>
+                        <span class="estudio-badge">2021</span>
+                        <p class="estudio-institution">Certificación Online</p>
+                        <p class="estudio-description">
+                            Gestión avanzada de bases de datos SQL y NoSQL para aplicaciones escalables.
+                        </p>
                     </div>
-                    <div class="card">
-                        <div class="icon">🎮</div>
-                        <p>Gaming</p>
-                    </div>
-                    <div class="card wide">
-                        <div class="icon">🎮</div>
-                        <p>Gaming</p>
-                    </div>
-                    <div class="card">
-                        <div class="icon">🎮</div>
-                        <p>Gaming</p>
+
+                    <div class="estudio-item">
+                        <div class="estudio-icon-wrapper">
+                            <i class="fas fa-mobile-alt estudio-icon"></i>
+                        </div>
+                        <h3 class="estudio-title">Desarrollo Móvil</h3>
+                        <span class="estudio-badge">2023</span>
+                        <p class="estudio-institution">Academia Tech</p>
+                        <p class="estudio-description">
+                            Creación de aplicaciones nativas y multiplataforma con React Native.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="modern-footer">
-            <div class="footer-container">
-                <div class="footer-header">
-                    <h3>CONTACT ME</h3>
-                    <p>Maneras de contactarme</p>
-                </div>
+        <!-- Experiencia Section -->
+        <section id="experiencia">
+            <h6>E</h6>
+            <div class="container">
+                <h4>EXPERIENCIA</h4>
+                <div class="experiencia-container">
+                    <div class="experiencia-item">
+                        <div class="experiencia-header">
+                            <h3 class="experiencia-title">Analista de Costos</h3>
+                            <span class="experiencia-duration">+1 Año</span>
+                        </div>
+                        <p class="experiencia-company">Empresa Financiera</p>
+                        <p class="experiencia-description">
+                            Análisis detallado de costos operativos y financieros, optimización de procesos contables
+                            y generación de reportes para la toma de decisiones estratégicas.
+                        </p>
+                    </div>
 
-                <div class="footer-links">
-                    <a href="mailto:sanchezwill596@gmail.com" class="footer-item">
-                        <i class="fa-solid fa-envelope"></i><span>Email</span>
-                    </a>
-                    <a href="tel:+573209170425" class="footer-item">
-                        <i class="fa-solid fa-phone"></i><span>Teléfono</span>
-                    </a>
-                    <a href="#" class="footer-item">
-                        <i class="fa-brands fa-linkedin"></i><span>LinkedIn</span>
-                    </a>
-                    <a href="#" class="footer-item">
-                        <i class="fa-brands fa-twitter"></i><span>Twitter</span>
-                    </a>
-                    <a href="#" class="footer-item">
-                        <i class="fa-brands fa-github"></i><span>GitHub</span>
-                    </a>
-                </div>
+                    <div class="experiencia-item">
+                        <div class="experiencia-header">
+                            <h3 class="experiencia-title">Contador Público</h3>
+                            <span class="experiencia-duration">+2 Años</span>
+                        </div>
+                        <p class="experiencia-company">Firma Contable</p>
+                        <p class="experiencia-description">
+                            Gestión integral de la contabilidad, elaboración de estados financieros, cumplimiento
+                            de obligaciones tributarias y asesoría en materia fiscal.
+                        </p>
+                    </div>
 
-                <div class="footer-bottom">
-                    <hr>
-                    <p>© 2025 | Designed by <span>William Sanchez</span></p>
+                    <div class="experiencia-item">
+                        <div class="experiencia-header">
+                            <h3 class="experiencia-title">Asesor Financiero</h3>
+                            <span class="experiencia-duration">+3 Años</span>
+                        </div>
+                        <p class="experiencia-company">Consultoría Independiente</p>
+                        <p class="experiencia-description">
+                            Asesoramiento personalizado en planificación financiera, análisis de inversiones
+                            y estrategias para la optimización de recursos económicos.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </section>
 
-        <!-- Iconos (Font Awesome) -->
-        <script src="https://kit.fontawesome.com/a2e0f1a0a2.js" crossorigin="anonymous"></script>
+        <!-- Hobbies Section -->
+        <section id="hobbies">
+            <h6>H</h6>
+            <div class="container">
+                <h4>HOBBIES</h4>
+                <div class="hobbies-container">
+                    <div class="hobby-item">
+                        <div class="hobby-header">
+                            <div class="hobby-emoji">🎮</div>
+                        </div>
+                        <div class="hobby-body">
+                            <h3 class="hobby-title">Gaming</h3>
+                            <p class="hobby-description">
+                                Apasionado por los videojuegos de estrategia y RPGs.
+                                Disfruto explorando mundos virtuales y desafíos competitivos.
+                            </p>
+                        </div>
+                    </div>
 
-        <!-- Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-            crossorigin="anonymous"></script>
+                    <div class="hobby-item">
+                        <div class="hobby-header">
+                            <div class="hobby-emoji">💻</div>
+                        </div>
+                        <div class="hobby-body">
+                            <h3 class="hobby-title">Programación Personal</h3>
+                            <p class="hobby-description">
+                                Desarrollo de proyectos personales y experimentación con nuevas
+                                tecnologías para mantenerme actualizado y seguir aprendiendo.
+                            </p>
+                        </div>
+                    </div>
 
-        <!-- JS Propio -->
-        <script src="assets/js/main.js"></script>
+                    <div class="hobby-item">
+                        <div class="hobby-header">
+                            <div class="hobby-emoji">🎵</div>
+                        </div>
+                        <div class="hobby-body">
+                            <h3 class="hobby-title">Música</h3>
+                            <p class="hobby-description">
+                                Disfruto diversos géneros musicales y asistir a conciertos.
+                                La música es mi fuente de inspiración y creatividad.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-header">
+                            <div class="hobby-emoji">📚</div>
+                        </div>
+                        <div class="hobby-body">
+                            <h3 class="hobby-title">Lectura</h3>
+                            <p class="hobby-description">
+                                Lector entusiasta de tecnología, ciencia ficción y desarrollo personal.
+                                Siempre buscando expandir mis conocimientos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-header">
+                            <div class="hobby-emoji">⚽</div>
+                        </div>
+                        <div class="hobby-body">
+                            <h3 class="hobby-title">Deportes</h3>
+                            <p class="hobby-description">
+                                Practico fútbol y running regularmente. El deporte me ayuda
+                                a mantener un equilibrio saludable entre mente y cuerpo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-header">
+                            <div class="hobby-emoji">🎨</div>
+                        </div>
+                        <div class="hobby-body">
+                            <h3 class="hobby-title">Diseño Gráfico</h3>
+                            <p class="hobby-description">
+                                Experimentación con diseño digital y creación de contenido visual.
+                                Me apasiona combinar estética y funcionalidad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
+    <footer id="contactame" class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-header">
+                <h3>CONTACTO</h3>
+                <p>Maneras de contactarme</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="mailto:sanchezwill596@gmail.com" class="footer-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="tel:+573209170425" class="footer-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Teléfono</span>
+                </a>
+                <a href="https://www.linkedin.com/in/william-andres-sanchez-rojas-1a3096264/" class="footer-item"
+                    target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://x.com/will6728" class="footer-item" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+                <a href="https://github.com/WilliamSanchezR" class="footer-item" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                <hr>
+                <p>© 2025 | Designed by <span>William Sanchez</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript Propio -->
+
+    <script src="/assets/js/main.js"></script>
 </body>
 
 </html>
