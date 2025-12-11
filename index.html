@@ -2,28 +2,22 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>William Sanchez - Portafolio</title>
 
     <!-- Bootstrap -->
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
     <!-- Bootstrap icons -->
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <!--  Awesome -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <!-- Propio -->
-
+    <!-- CSS Propio -->
     <link rel="stylesheet" href="assets/css/styles.css">
-
 </head>
 
 <body>
@@ -31,8 +25,9 @@
     <header>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Logo"
-                        style="background: linear-gradient(135deg, #f56e0f 0%, #ff8c3a 100%); padding: 8px; border-radius: 10px;"></a>
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/logo.png" alt="Logo">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -128,10 +123,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-4 mb-lg-0">
                         <div class="cont-img-perfil">
-                            <!-- Placeholder para imagen -->
-                            <div
-                                style="width: 100%; height: 400px; background: linear-gradient(135deg, rgba(245, 110, 15, 0.2) 0%, rgba(255, 140, 58, 0.2) 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--primary-color);">
-                                <i class="fas fa-camera" style="font-size: 80px; color: var(--primary-color);"></i>
+                            <div class="perfil-placeholder">
+                                <i class="fas fa-camera"></i>
                             </div>
                         </div>
                     </div>
@@ -209,66 +202,8 @@
             <h6>P</h6>
             <div class="container">
                 <h4>PORTAFOLIO</h4>
-                <div class="cards-container">
-                    <div class="project-card">
-                        <div class="card-header">
-                            <div
-                                style="width: 100%; height: 100%; background: linear-gradient(135deg, #2a2930 0%, #1a1920 100%); display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-code" style="font-size: 60px; color: var(--primary-color);"></i>
-                            </div>
-                            <i class="bi bi-box-arrow-up-right"></i>
-                        </div>
-                        <div class="card-body">
-                            <i class="bi bi-heart"></i>
-                            <h3>Algoritmos con JavaScript Vanilla</h3>
-                            <p>Nivel Intermedio-Avanzado</p>
-                        </div>
-                        <div class="card-footer">
-                            <i class="fas fa-book"></i>
-                            <i class="fas fa-code"></i>
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="card-header">
-                            <div
-                                style="width: 100%; height: 100%; background: linear-gradient(135deg, #2a2930 0%, #1a1920 100%); display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-laptop-code" style="font-size: 60px; color: var(--primary-color);"></i>
-                            </div>
-                            <i class="bi bi-box-arrow-up-right"></i>
-                        </div>
-                        <div class="card-body">
-                            <i class="bi bi-heart"></i>
-                            <h3>Aplicación Web Responsiva</h3>
-                            <p>Nivel Avanzado</p>
-                        </div>
-                        <div class="card-footer">
-                            <i class="fas fa-book"></i>
-                            <i class="fas fa-code"></i>
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="card-header">
-                            <div
-                                style="width: 100%; height: 100%; background: linear-gradient(135deg, #2a2930 0%, #1a1920 100%); display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-mobile-alt" style="font-size: 60px; color: var(--primary-color);"></i>
-                            </div>
-                            <i class="bi bi-box-arrow-up-right"></i>
-                        </div>
-                        <div class="card-body">
-                            <i class="bi bi-heart"></i>
-                            <h3>Diseño UI/UX Mobile First</h3>
-                            <p>Nivel Intermedio</p>
-                        </div>
-                        <div class="card-footer">
-                            <i class="fas fa-book"></i>
-                            <i class="fas fa-code"></i>
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                    </div>
+                <div class="cards-container" id="projects-container">
+                    <p id="loading-message">Cargando proyectos de GitHub...</p>
                 </div>
             </div>
         </section>
@@ -279,39 +214,30 @@
             <div class="container">
                 <h4>ESTUDIOS</h4>
                 <div class="estudios-container">
-                    <div class="estudio-item">
-                        <div class="estudio-icon-wrapper">
-                            <i class="fas fa-graduation-cap estudio-icon"></i>
-                        </div>
-                        <h3 class="estudio-title">Desarrollo Web Full Stack</h3>
-                        <span class="estudio-badge">2023</span>
-                        <p class="estudio-institution">Instituto Tecnológico</p>
-                        <p class="estudio-description">
-                            Formación integral en desarrollo web moderno, frontend, backend y bases de datos.
-                        </p>
-                    </div>
 
                     <div class="estudio-item">
                         <div class="estudio-icon-wrapper">
                             <i class="fas fa-code estudio-icon"></i>
                         </div>
-                        <h3 class="estudio-title">Programación Avanzada</h3>
-                        <span class="estudio-badge">2022</span>
-                        <p class="estudio-institution">Universidad Digital</p>
+                        <h3 class="estudio-title">Análisis y Desarrollo de Software (ADSO)</h3>
+                        <span class="estudio-badge">En Curso (2024-2026)</span>
+                        <p class="estudio-institution">SENA</p>
                         <p class="estudio-description">
-                            Algoritmos, estructuras de datos y patrones de diseño profesionales.
+                            Formación integral en el ciclo de vida del software, desde el diseño (UML) hasta la
+                            implementación y pruebas de aplicaciones web.
                         </p>
                     </div>
 
                     <div class="estudio-item">
                         <div class="estudio-icon-wrapper">
-                            <i class="fas fa-palette estudio-icon"></i>
+                            <i class="fas fa-laptop-code estudio-icon"></i>
                         </div>
-                        <h3 class="estudio-title">Diseño UX/UI</h3>
-                        <span class="estudio-badge">2022</span>
-                        <p class="estudio-institution">Escuela de Diseño</p>
+                        <h3 class="estudio-title">Técnico en Sistemas</h3>
+                        <span class="estudio-badge">2017</span>
+                        <p class="estudio-institution">Institución Técnica</p>
                         <p class="estudio-description">
-                            Experiencia de usuario, diseño de interfaces y prototipado con Figma.
+                            Conocimiento en mantenimiento de hardware, redes y fundamentos de programación,
+                            proporcionando una base sólida en tecnología.
                         </p>
                     </div>
 
@@ -319,35 +245,12 @@
                         <div class="estudio-icon-wrapper">
                             <i class="fas fa-chart-line estudio-icon"></i>
                         </div>
-                        <h3 class="estudio-title">Contaduría Pública</h3>
-                        <span class="estudio-badge">2020</span>
-                        <p class="estudio-institution">Universidad Nacional</p>
+                        <h3 class="estudio-title">Contador Público</h3>
+                        <span class="estudio-badge">2025</span>
+                        <p class="estudio-institution">Corporacion universitaria Minuto de Dios</p>
                         <p class="estudio-description">
-                            Título profesional con énfasis en finanzas y auditoría empresarial.
-                        </p>
-                    </div>
-
-                    <div class="estudio-item">
-                        <div class="estudio-icon-wrapper">
-                            <i class="fas fa-database estudio-icon"></i>
-                        </div>
-                        <h3 class="estudio-title">Bases de Datos</h3>
-                        <span class="estudio-badge">2021</span>
-                        <p class="estudio-institution">Certificación Online</p>
-                        <p class="estudio-description">
-                            Gestión avanzada de bases de datos SQL y NoSQL para aplicaciones escalables.
-                        </p>
-                    </div>
-
-                    <div class="estudio-item">
-                        <div class="estudio-icon-wrapper">
-                            <i class="fas fa-mobile-alt estudio-icon"></i>
-                        </div>
-                        <h3 class="estudio-title">Desarrollo Móvil</h3>
-                        <span class="estudio-badge">2023</span>
-                        <p class="estudio-institution">Academia Tech</p>
-                        <p class="estudio-description">
-                            Creación de aplicaciones nativas y multiplataforma con React Native.
+                            Título profesional con énfasis en finanzas, análisis de datos y auditoría empresarial.
+                            Muestra una fuerte capacidad analítica y lógica.
                         </p>
                     </div>
                 </div>
@@ -446,13 +349,13 @@
 
                     <div class="hobby-item">
                         <div class="hobby-header">
-                            <div class="hobby-emoji">📚</div>
+                            <div class="hobby-emoji">🎬</div>
                         </div>
                         <div class="hobby-body">
-                            <h3 class="hobby-title">Lectura</h3>
+                            <h3 class="hobby-title">Cine y Crítica</h3>
                             <p class="hobby-description">
-                                Lector entusiasta de tecnología, ciencia ficción y desarrollo personal.
-                                Siempre buscando expandir mis conocimientos.
+                                Análisis de narrativas, dirección y composición visual en el cine.
+                                Fomenta la creatividad y la atención a la estructura y el detalle.
                             </p>
                         </div>
                     </div>
@@ -472,13 +375,39 @@
 
                     <div class="hobby-item">
                         <div class="hobby-header">
-                            <div class="hobby-emoji">🎨</div>
+                            <div class="hobby-emoji">♟️</div>
                         </div>
                         <div class="hobby-body">
-                            <h3 class="hobby-title">Diseño Gráfico</h3>
+                            <h3 class="hobby-title">Ajedrez y Estrategia</h3>
                             <p class="hobby-description">
-                                Experimentación con diseño digital y creación de contenido visual.
-                                Me apasiona combinar estética y funcionalidad.
+                                Participo en juegos de estrategia que fomentan el pensamiento lógico, la planificación a
+                                largo plazo y la resolución de problemas complejos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-header">
+                            <div class="hobby-emoji">🎙️</div>
+                        </div>
+                        <div class="hobby-body">
+                            <h3 class="hobby-title">Creación de Contenido</h3>
+                            <p class="hobby-description">
+                                Producción de contenido digital (podcast/videos) que implica edición, guionismo y
+                                práctica de la comunicación efectiva.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-header">
+                            <div class="hobby-emoji">📈</div>
+                        </div>
+                        <div class="hobby-body">
+                            <h3 class="hobby-title">Análisis de Datos Financieros</h3>
+                            <p class="hobby-description">
+                                Aplicación de mi experiencia contable para modelar datos, crear hojas de cálculo
+                                avanzadas y simular escenarios financieros.
                             </p>
                         </div>
                     </div>
@@ -487,12 +416,12 @@
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer id="contactame" class="modern-footer">
-        <div class="footer-container">
+        <div class="container">
             <div class="footer-header">
-                <h3>CONTACTO</h3>
-                <p>Maneras de contactarme</p>
+                <h3>PONGÁMONOS EN CONTACTO</h3>
+                <p>Estoy disponible para nuevos proyectos y oportunidades.</p>
             </div>
 
             <div class="footer-links">
@@ -506,22 +435,21 @@
                 </a>
                 <a href="https://www.linkedin.com/in/william-andres-sanchez-rojas-1a3096264/" class="footer-item"
                     target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="bi bi-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
                 <a href="https://x.com/will6728" class="footer-item" target="_blank">
-                    <i class="fa-brands fa-twitter"></i>
+                    <i class="bi bi-twitter-x"></i>
                     <span>Twitter</span>
                 </a>
                 <a href="https://github.com/WilliamSanchezR" class="footer-item" target="_blank">
-                    <i class="fa-brands fa-github"></i>
+                    <i class="bi bi-github"></i>
                     <span>GitHub</span>
                 </a>
             </div>
 
             <div class="footer-bottom">
-                <hr>
-                <p>© 2025 | Designed by <span>William Sanchez</span></p>
+                <p>© 2025 | Desarrollado por <span>William Sanchez</span></p>
             </div>
         </div>
     </footer>
@@ -535,8 +463,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JavaScript Propio -->
-
-    <script src="/assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
