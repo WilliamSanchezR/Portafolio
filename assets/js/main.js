@@ -1,18 +1,19 @@
-// Navbar scroll effect
+// Navbar scroll effect y Scroll to top button (consolidado para mejor rendimiento)
+const navbar = document.querySelector('.navbar');
+const scrollTopBtn = document.getElementById('scrollTop');
+
 window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
+    const scrollY = window.scrollY;
+    
+    // Navbar effect
+    if (scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-});
-
-// Scroll to top button
-const scrollTopBtn = document.getElementById('scrollTop');
-
-window.addEventListener('scroll', function() {
-    if (window.scrollY > 300) {
+    
+    // Scroll to top button
+    if (scrollY > 300) {
         scrollTopBtn.classList.add('visible');
     } else {
         scrollTopBtn.classList.remove('visible');
@@ -84,17 +85,16 @@ const PROJECTS_CONTAINER_ID = "projects-container";
 const API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=created&per_page=100`; 
 
 // LISTA DE PROYECTOS CLAVE:
-// Aquí debes poner los nombres EXACTOS de tus 8 repositorios
-// que quieres que aparezcan en tu portafolio.
+// Repositorios reales que se mostrarán en el portafolio
 const REPOSITORIES_TO_SHOW = [
-    "simulador_inversion_js",  // Proyecto 1: Ejemplo de Proyecto ADSO
-    "WilliamSanchezR-TALLER-PRACTICO-JAVASCIRPT-ALGORTIMOS-NIVEL-INTERMEDIO-AVANZADO", // Proyecto 2: Proyecto de Responsive Design
-    "calculadora-avanzada",    // Proyecto 3: App de Lógica y Contaduría
-    "sistema-crud-php",        // Proyecto 4: Proyecto de Back-end (Ejemplo)
-    "portafolio-personal-v2",  // Proyecto 5: Una iteración de tu portafolio
-    "juego-con-js-canvas",     // Proyecto 6: Un juego simple de clase
-    "api-consumo-ejemplo",     // Proyecto 7: Proyecto de consumo de API
-    "proyecto-sql-database"    // Proyecto 8: Proyecto de base de datos
+    "VETWILLING",
+    "TALLER-PRACTICO-HTML-CSS-JAVASCRIPT-DRIVEWAYS-RESPONSIVE",
+    "TALLER-PRACTICO-JAVASCIRPT-ALGORTIMOS-NIVEL-INTERMEDIO-AVANZADO",
+    "Backend-guiado-del-proyecto-Formativo-Vetwilling",
+    "Proyecto-Formativo-Vetwilling",
+    "Proyecto-de-practica-Reproductor-de-musica",
+    "Proyecto-de-practica-CINESCAPE",
+    "Base-Vehiculos-Dinamicos-Proyecto-de-practica"
 ];
 
 
@@ -115,7 +115,7 @@ function createProjectCard(repo) {
     const projectDescription = repo.description || "Este es un proyecto importante desarrollado en mi proceso de formación.";
     
     // Lógica simple para seleccionar un icono basado en el lenguaje principal
-    let langIcon = "fas fa-code"; // Icono por defecto
+    let langIcon = "bi bi-code-slash"; // Icono por defecto (Bootstrap Icons)
     if (repo.language === "JavaScript") {
         langIcon = "bi bi-filetype-js";
     } else if (repo.language === "HTML") {
@@ -124,6 +124,8 @@ function createProjectCard(repo) {
         langIcon = "bi bi-filetype-css";
     } else if (repo.language === "PHP") {
         langIcon = "bi bi-filetype-php";
+    } else if (repo.language === "Python") {
+        langIcon = "bi bi-filetype-py";
     } 
 
     // Usamos backticks (``) para escribir el HTML de forma multilinea
@@ -144,7 +146,7 @@ function createProjectCard(repo) {
             </div>
             <div class="card-footer">
                 <span class="language-tag">${repo.language || 'Sin especificar'}</span>
-                <span class="stars"><i class="fas fa-star"></i> ${repo.stargazers_count}</span>
+                <span class="stars"><i class="bi bi-star-fill"></i> ${repo.stargazers_count}</span>
             </div>
         </div>
     `;
