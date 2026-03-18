@@ -3,7 +3,7 @@
 
 *:root {
     --primary-color: #f56e0f;
-    --secondary-color: #878787;
+    --secondary-color: #c8c8c8;
     --tercery-color: #fbfbfb;
     --fourty-color: #151419;
     --primary-text: "Oswald", sans-serif; /*texto para parrafos o todo lo aparte de los h*/
@@ -58,6 +58,13 @@ html {
     border-radius: 10px;
 }
 
+@media (max-width: 576px) {
+    .navbar-brand img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
 .navbar-brand:hover img {
     transform: scale(1.05);
 }
@@ -70,6 +77,20 @@ html {
     transition: color 0.3s ease;
     position: relative;
     text-transform: capitalize;
+}
+
+@media (max-width: 992px) {
+    .nav-link {
+        font-size: 14px;
+        padding: 4px 12px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-link {
+        font-size: 13px;
+        padding: 3px 10px !important;
+    }
 }
 
 .nav-link::after {
@@ -115,9 +136,63 @@ html {
     transition: all 0.3s ease;
 }
 
+@media (max-width: 576px) {
+    .logo-redes {
+        font-size: 16px;
+        margin: 0 5px;
+    }
+}
+
 .logo-redes:hover {
     color: var(--tercery-color);
     transform: translateY(-3px);
+}
+
+/* Botón Descargar CV */
+.btn-download-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: var(--primary-color);
+    color: var(--fourty-color);
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-download-cv:hover {
+    background: #ff8c3a;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(245, 110, 15, 0.4);
+    color: var(--fourty-color);
+}
+
+.btn-download-cv i {
+    font-size: 15px;
+}
+
+/* Media query para CV button en mobile */
+@media (max-width: 992px) {
+    .btn-download-cv span {
+        display: none;
+    }
+    
+    .btn-download-cv {
+        padding: 8px 12px;
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-download-cv {
+        margin: 5px 0;
+    }
 }
 
 /* Logo del navbar */
@@ -1041,16 +1116,20 @@ section h4::after {
 @media (max-width: 768px) {
     .hero {
         min-height: auto;
-        padding: 80px 20px 40px;
+        padding: 60px 15px 30px;
     }
 
     .hero-circle {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
     }
 
     .nombre h2, .nombre h3 {
-        font-size: 28px;
+        font-size: 24px;
+    }
+
+    .nombre h3 span {
+        font-size: clamp(32px, 5vw, 50px);
     }
 
     .linea-hor {
@@ -1076,18 +1155,226 @@ section h4::after {
     }
 
     section h6 {
-        font-size: 60px;
+        font-size: 50px !important;
     }
 
     .footer-links {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
     }
 
     .footer-item {
-        width: 100%;
-        max-width: 300px;
+        width: 90%;
         justify-content: center;
+    }
+
+    .cont-intro a {
+        padding: 10px 25px;
+        font-size: 13px;
+    }
+}
+
+/* Tablets y dispositivos medianos */
+@media (max-width: 576px) {
+    .hero {
+        padding: 60px 15px 20px;
+    }
+
+    .hero-circle {
+        width: 200px;
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    .nombre {
+        margin-bottom: 20px;
+    }
+
+    .nombre h2, .nombre h3 {
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 2px;
+    }
+
+    .nombre h3 span {
+        font-size: clamp(24px, 4vw, 40px);
+    }
+
+    .enlaces-contacto {
+        font-size: 14px;
+    }
+
+    .enlaces-contacto a {
+        margin: 0 5px;
+    }
+
+    .linea-ver {
+        margin: 0 10px;
+    }
+
+    .cont-intro {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .cont-intro h2 {
+        font-size: 18px;
+    }
+
+    .cont-intro p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .cont-intro a {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    /* Secciones */
+    section {
+        padding: 60px 15px !important;
+    }
+
+    section h6 {
+        font-size: 40px !important;
+    }
+
+    section h4 {
+        font-size: clamp(20px, 5vw, 28px) !important;
+        margin-bottom: 30px !important;
+    }
+
+    /* Skills */
+    .skills {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 15px;
+        margin-top: 40px;
+    }
+
+    .skill {
+        padding: 15px 10px;
+        min-height: 100px;
+        gap: 8px;
+    }
+
+    .skill-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill-title {
+        font-size: 11px;
+    }
+
+    /* Cards */
+    .project-card {
+        padding: 20px;
+        min-height: 250px;
+    }
+
+    .card-header {
+        margin-bottom: 10px;
+    }
+
+    .project-placeholder {
+        width: 40px;
+        height: 40px;
+    }
+
+    .project-placeholder i {
+        font-size: 50px;
+    }
+
+    .card-header a {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    /* Perfil */
+    .cont-img-perfil {
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+
+    .perfil-placeholder {
+        height: 280px !important;
+    }
+
+    .cont-info-perfil {
+        padding: 20px 15px;
+    }
+
+    .cont-info-perfil p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Experiencia */
+    .experiencia-item {
+        padding: 20px 15px;
+        margin-left: 0;
+        border-left: 2px solid var(--primary-color);
+    }
+
+    .experiencia-title {
+        font-size: 18px;
+    }
+
+    .experiencia-duration {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+
+    .experiencia-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* Estudios */
+    .estudios-container {
+        grid-template-columns: 1fr;
+    }
+
+    .estudio-item {
+        padding: 20px 15px;
+    }
+
+    .estudio-title {
+        font-size: 16px;
+    }
+
+    /* Footer */
+    .footer-header h3 {
+        font-size: 24px;
+    }
+
+    .footer-header p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .footer-item {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .footer-item i {
+        font-size: 14px;
+    }
+
+    /* Scroll to top button */
+    .scroll-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 18px;
     }
 }
 
